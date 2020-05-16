@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+
+
+<script>
+    $(document).ready(function(){
+    $('img').bind('mouseenter mouseleave', function() {
+    $(this).attr({
+        src: $(this).attr('data-other-src') 
+        , 'data-other-src': $(this).attr('src') 
+      })
+    });
+  });
+</script>
+</head>
+
+<body>
+    <img data-other-src="1b.jpg" src="1a.jpg" width="1000px">
+    <img data-other-src="2b.jpg" src="2a.jpg" width="1000px">
+    <img data-other-src="3b.jpg" src="3a.jpg" width="1000px">
+</body>
+
+</html>
